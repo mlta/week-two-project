@@ -61,6 +61,17 @@ function question4 () {
 //    Display the name, number of items and the items it is made of.
 function question5 () {
   // Answer:
+  let itemsWithOverEightMaterials = [];
+for (var i = 0; i < data.length; i++) {
+  if(data[i]['materials'].length >= 8) {
+    itemsWithOverEightMaterials.push(data[i]['title'], data[i]['materials'].length, data[i]['materials']);
+    console.log(data[i]['title'] + ' has ' + data[i]['materials'].length + ' materials: ');
+    for (var j = 0; j < data[i]['materials'][j].length; j++) {
+      console.log('- ' + data[i]['materials'][j]);
+    }
+  }
+}
+}
 }
 
 
